@@ -1,0 +1,62 @@
+<h1 class="mb-4">Shopping Cart</h1>
+
+<table class="table table-bordered text-center align-middle">
+
+    <thead>
+
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let item of cartItems()">
+
+            <td>
+                <img [src]="item.image" width="100" height="100" />
+            </td>
+
+            <td>{{ item.name }}</td>
+
+            <td>₹{{ item.price }}</td>
+
+            <td>
+
+                <button class="btn btn-danger me-2" (click)="decreaseQuantity(item)">
+                    -
+                </button>
+
+                {{ item.quantity }}
+
+                <button class="btn btn-success ms-2" (click)="increaseQuantity(item)">
+                    +
+                </button>
+
+            </td>
+
+            <td>
+                ₹{{ item.price * item.quantity }}
+            </td>
+
+            <td>
+                <button class="btn btn-dark" (click)="deleteItem(item._id)">
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<h2 class="text-end text-primary">
+    Grand Total : ₹{{ grandTotal }}
+</h2>

@@ -1,0 +1,43 @@
+<div class="row">
+
+    <div class="col-md-6 mb-4" *ngFor="let pizza of pizzas()">
+        <div class="card p-3 pizza-card">
+
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <h2>{{ pizza.name }}</h2>
+
+                    <div [ngClass]="pizza.type === 'veg' ? 'veg-box' : 'nonveg-box'"></div>
+
+                    <p>{{ pizza.description }}</p>
+                    <p>
+                        <b>Ingredients :</b>
+                        {{ pizza.ingredients?.join(', ') }}
+                    </p>
+
+                    <p>
+                        <b>Toppings :</b>
+                        {{ pizza.topping?.join(', ') }}
+                    </p>
+
+                    <h3>₹{{ pizza.price }}</h3>
+
+                </div>
+                <div class="col-md-4 text-center">
+
+                    <img [src]="pizza.image" class="pizza-image" />
+
+                    <button class="btn btn-warning mt-3" (click)="addToCart(pizza)">
+                        Add to Cart
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

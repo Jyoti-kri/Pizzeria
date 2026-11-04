@@ -1,0 +1,40 @@
+<div class="container mt-5">
+
+    <div class="card p-4 shadow w-50 mx-auto">
+
+        <h2 class="text-center mb-4">
+            Login
+        </h2>
+
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+            <div class="mb-3">
+
+                <label>
+                    Email or Username
+                </label>
+
+                <input type="text" placeholder="Enter email or username" class="form-control" formControlName="login" />
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+                    Password
+                </label>
+
+                <input type="password" placeholder="Enter password" class="form-control" formControlName="password" />
+
+            </div>
+
+            <button class="btn btn-dark w-100" type="submit" [disabled]="loginForm.invalid">
+
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

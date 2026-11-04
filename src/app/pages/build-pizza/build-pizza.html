@@ -1,0 +1,48 @@
+<div class="build-wrapper">
+
+    <p class="text-center mb-4 fs-5">
+        Pizzeria now gives you options to build your own pizza.
+    </p>
+
+    <table class="table table-bordered">
+
+        <tbody>
+
+            <tr *ngFor="let item of ingredients()">
+
+                <td>
+                    <img [src]="item.image" class="ingredient-image" />
+                </td>
+                <td>
+                    <h4>{{ item.tname }}</h4>
+                    <h5>₹{{ item.price }}</h5>
+                </td>
+
+                <td>
+
+                    <input type="checkbox" (change)="updatePrice(item, $event)" /> <!-- -->
+
+                    <span class="ms-2 text-warning fw-bold">
+                        Add
+                    </span>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h1 class="text-primary">
+        Total Cost : {{ totalPrice }}
+    </h1>
+
+    <div class="text-center mt-4">
+
+        <button class="btn btn-warning btn-lg" (click)="buildPizza()">
+            Build Ur Pizza
+        </button>
+
+    </div>
+
+</div>

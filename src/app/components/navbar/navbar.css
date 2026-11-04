@@ -1,0 +1,43 @@
+.bg-black {
+  background-color: rgb(78, 119, 184);
+}
+
+.brand-text {
+  font-size: 40px;
+  color: white;
+  margin-right: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+.nav-link {
+  color: white !important;
+  font-size: 28px;
+  margin-right: 20px;
+}
+
+.cart-btn {
+  background-color: white !important;
+  font-size: 22px;
+  padding: 10px 20px;
+}
+
+
+
+
+.active-link {
+  color: yellow !important;
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}
+
+.active-cart {
+  background-color: yellow !important;
+  color: black !important;
+  font-weight: bold;
+}

@@ -1,0 +1,50 @@
+.home-wrapper {
+    border: 1px solid #f3d7a3;
+    padding: 30px;
+}
+
+.story-heading {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.story-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.section-border {
+    border-top: 1px solid #e5d5b8;
+    padding-top: 30px;
+}
+
+.section-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.section-text {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+.delivery-title {
+    font-size: 55px;
+    font-weight: 300;
+}
+
+.footer-text {
+    color: orange;
+    font-size: 20px;
+    font-style: italic;
+}

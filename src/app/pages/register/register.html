@@ -1,0 +1,52 @@
+<div class="container mt-5">
+
+    <div class="card p-4 shadow w-50 mx-auto">
+
+        <h2 class="text-center mb-4">
+            Register
+        </h2>
+
+        <form [formGroup]="registerForm" (ngSubmit)="registerUser()" autocomplete="off">
+
+            <div class="mb-3">
+
+                <label>
+                    Username
+                </label>
+
+                <input type="text" placeholder="Enter your username" class="form-control" formControlName="username"
+                    autocomplete="off" />
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+                    Email
+                </label>
+
+                <input type="email" placeholder="Enter your mail" class="form-control" formControlName="email" />
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+                    Password
+                </label>
+
+                <input type="password" placeholder="Password should be of length 6" class="form-control"
+                    formControlName="password" autocomplete="new-password" />
+
+            </div>
+
+            <button class="btn btn-warning w-100" type="submit" [disabled]="registerForm.invalid">
+
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
